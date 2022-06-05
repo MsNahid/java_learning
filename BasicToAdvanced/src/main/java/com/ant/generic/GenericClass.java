@@ -14,6 +14,4 @@ public class GenericClass<T> {
 
     private T data;
 
-
-
 }

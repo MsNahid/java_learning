@@ -15,5 +15,9 @@ public class GenericDriver {
         GenericClass<String> stringGenericClass = new GenericClass<>("Java Programming.");
 
         System.out.println(stringGenericClass.getData());
+        System.out.println("'\n\n################################\n\n");
+
+        DemoClass demoClass = new DemoClass();
+        demoClass.genericMethod("Meta");
     }
 }

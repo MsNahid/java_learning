@@ -1,5 +1,8 @@
 package com.ant.generic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenericDriver {
 
     public static void main(String[] args) {
@@ -19,5 +22,35 @@ public class GenericDriver {
 
         DemoClass demoClass = new DemoClass();
         demoClass.genericMethod("Meta");
+
+        Animal animal = new Animal();
+        animal.eat();
+
+        Dog dog = new Dog();
+        dog.eat();
+
+        Cat cat = new Cat();
+        cat.eat();
+
+        List<Object> objectList = new ArrayList<>();
+        objectList.add(cat);
+        objectList.add(dog);
+
+        Cat cat1 = (Cat)objectList.get(0);
+        Dog dog1 = (Dog)objectList.get(1);
+
+        cat1.eat();
+        dog1.eat();
+
+        // using generic for safe type casting
+        List<Cat> catList = new ArrayList<>();
+        catList.add(cat1);
+//        catList.add(dog1); // compile time error
+
+        GenericBoundTypes<Cat> catGenericBoundTypes = new GenericBoundTypes<>(new Cat());
+        catGenericBoundTypes.methodOfThingsToPrint();
     }
+
+
+
 }

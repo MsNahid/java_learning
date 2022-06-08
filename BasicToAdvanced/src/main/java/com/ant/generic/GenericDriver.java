@@ -49,6 +49,21 @@ public class GenericDriver {
 
         GenericBoundTypes<Cat> catGenericBoundTypes = new GenericBoundTypes<>(new Cat());
         catGenericBoundTypes.methodOfThingsToPrint();
+
+        methodOfGeneric("book");
+        methodOfGeneric(12.666);
+
+        System.out.println(methodOfGenericReturn("book", 12));
+
+
+    }
+
+    public static <T> void  methodOfGeneric(T thingsToShout){
+        System.out.println(thingsToShout + " !!!!");
+    }
+
+    public static <T, V> V methodOfGenericReturn(T t, V v){
+        return v;
     }
 
 

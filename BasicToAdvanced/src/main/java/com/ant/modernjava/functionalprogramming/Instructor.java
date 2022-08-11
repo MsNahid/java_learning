@@ -19,5 +19,7 @@ public class Instructor {
 
     String gender;
 
+    Boolean isOnlineCourses;
+
     List<String> courses;
 }
